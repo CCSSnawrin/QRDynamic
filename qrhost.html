@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Time</h1>
+    <p id="time"></p>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("time").textContent = now.toLocaleString();
+        }
+        updateTime(); // Set initial time
+        setInterval(updateTime, 1000); // Update every second
+    </script>
+</body>
+</html>
